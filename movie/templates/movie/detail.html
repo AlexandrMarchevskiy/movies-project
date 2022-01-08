@@ -1,0 +1,13 @@
+{% extends 'movie/base.html' %}
+{% block content %}
+<h1>{{movie.title}}</h1>
+<hr>
+<b>{{ movie.actor1 }} | {{ movie.actor2 }} | {{ movie.actor3 }}</b>
+<h5>{{ movie.cat }}</h5>
+
+{% if movie.image %}
+<p><img class="img-article-left" src="{{movie.image.url}}"></p>
+{% endif %}
+{{movie.description|linebreaks}}
+
+{% endblock %}
